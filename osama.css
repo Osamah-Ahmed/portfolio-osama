@@ -1,0 +1,512 @@
+/* تحسين الخطوط والألوان */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    scroll-behavior: smooth; /* الانتقال السلس */
+}
+
+/* ==== تحسين الهيدر ==== */
+header {
+    background: linear-gradient(to right, #000, #013a03, #008704, #013a03, #000);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 8px solid #00ff00;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+.site-title {
+    color: #00ff00;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+  
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+/* تأثير عند تمرير الماوس على الروابط */
+header nav ul li a:hover {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 0 0 10px #00ff00(255, 215, 0, 0.8);
+}
+
+/* ==== تحسين الانتقال السلس عند الضغط على الأقسام ==== */
+html {
+    scroll-behavior: smooth; /* يجعل التنقل بين الأقسام سلس */
+}
+
+/* ==== تحسين الأقسام ==== */
+.section {
+    padding: 80px 20px;
+    margin: 80px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* ==== تأثير ظهور العناصر عند التمرير ==== */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==== تحسين الفوتر ==== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+}
+
+/* ==== تحسين الروابط ==== */
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #8B0000;
+}
+/* ==== تأثير الانتقال السلس ==== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==== تأثير ظهور الأقسام تدريجيًا عند التمرير ==== */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==== تحسين الهيدر لجعله يتغير عند التمرير ==== */
+header {
+    transition: height 0.3s ease-in-out;
+}
+/* ==== تنسيق قسم المقترحات ==== */
+#suggestions form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+#suggestions label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#suggestions input,
+#suggestions textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#suggestions textarea {
+    height: 100px;
+    resize: none;
+}
+
+#suggestions button {
+    background-color: #00ff00;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#suggestions button:hover {
+    background-color: #008704;
+}
+
+/* ==== تأكيد إرسال المقترح ==== */
+#confirmationMessage {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+/* إضافة في CSS */
+.active-section {
+    color: #00ff26 !important;
+    transform: scale(1.1);
+  }
+  /* إضافة في CSS */
+nav ul li {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #00ff00;
+    transition: all 0.3s;
+  }
+  
+  nav ul li:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  /* إضافة في CSS */
+.lazy-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .lazy-load.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* إضافة في CSS */
+input:focus, textarea:focus {
+    outline: 2px solid #013a03;
+    border-color: transparent;
+  }
+  
+  input:valid, textarea:valid {
+    border-color: #00ff00;
+  }
+  
+  input:invalid:not(:placeholder-shown),
+  textarea:invalid:not(:placeholder-shown) {
+    border-color: #ff0000;
+  }
+  /* إضافة في CSS */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #00ff08;
+    z-index: 9999;
+  }
+  /* إضافة في CSS */
+.skill-bar {
+    height: 20px;
+    background: #eee;
+    border-radius: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #008704, #008704);
+    transition: width 1s ease-in-out;
+  }
+  /* إضافة في CSS */
+.project {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  /* إضافة في CSS */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --section-bg: #fff;
+  }
+  
+  .dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #fff;
+    --section-bg: #2d2d2d;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .section {
+    background-color: var(--section-bg);
+  }
+  /* إضافة في CSS */
+.skill-bar {
+  height: 20px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff00, #008704);
+  transition: width 1s ease-in-out;
+}
+button {
+  color: black;
+  padding: 10px;
+  background-color: #00ff00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+  nav {
+      flex-direction: column;
+  }
+  .container {
+      width: 100%;
+      padding: 10px;
+  }
+}
+/* From Uiverse.io by kamehame-ha */ 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #ffffff;
+}
+
+.button:hover svg path {
+  fill: #181717;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.input-wrapper {
+  width: fit-content;
+  height: 45px;
+  border-radius: 20px;
+  padding: 5px;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  background-color: #292524;
+}
+
+.icon {
+  width: 30px;
+  fill: rgb(255, 255, 255);
+  margin-left: 8px;
+  transition: all 0.3s;
+}
+.input {
+  max-width: 170px;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  background-color: #292524;
+  color: white;
+  font-size: 1em;
+}
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
+  -webkit-text-fill-color: #ffffff;
+}
+.Subscribe-btn {
+  height: 100%;
+  width: 95px;
+  border: none;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  background-color: #ffffff;
+  font-weight: 500;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s;
+}
+.arrow {
+  /* display: none; */
+  position: absolute;
+  margin-right: 150px;
+  transition: all 0.3s;
+}
+.input-wrapper:active .icon {
+  transform: scale(1.3);
+}
+.Subscribe-btn:hover {
+  color: white;
+}
+.Subscribe-btn:hover .arrow {
+  margin-right: 0;
+  animation: jello-vertical 0.9s both;
+  transform-origin: right;
+}
+
+@keyframes jello-vertical {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  40% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  50% {
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  65% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  75% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.Subscribe-btn:active {
+  transform: scale(0.9);
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0077b5;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  border: 1px solid rgba(216, 216, 216, 0.466);
+  background-color: rgba(190, 190, 190, 0.466);
+  backdrop-filter: blur(4px);
+}
